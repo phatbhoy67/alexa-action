@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Alexa Rank action step
         id: alexa
-        uses: phatbhoy67/alexa-action@v1
+        uses: phatbhoy67/alexa-action
         with:
           site-url: "google.com"
       # Use the output from the `alexa` step
