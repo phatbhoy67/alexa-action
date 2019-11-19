@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to get Alexa Rank
+    steps:
+      - name: Alexa Rank action step
+        id: alexa
+        uses: actions/alexa-action@v1
+        with:
+          site-url: "google.com"
+      # Use the output from the `alexa` step
+      - name: Get the Alexa Rank
+        run: echo "The rank is ${{ steps.alexa.outputs.rank }}"
