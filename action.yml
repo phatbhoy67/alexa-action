@@ -1,0 +1,13 @@
+name: "Alexa Rank"
+description: "Get the Alexa rank for a website"
+inputs:
+  site-url: # id of input
+    description: "The url of the site"
+    required: true
+    default: "github.com"
+outputs:
+  rank: # id of output
+    description: "The Alexa rank for the site"
+runs:
+  using: "node12"
+  main: "index.js"
