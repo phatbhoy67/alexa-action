@@ -1,13 +1,32 @@
+#on: [push]
+
+# jobs:
+#   hello_world_job:
+#     runs-on: ubuntu-latest
+#     name: A job to get Alexa Rank
+#     steps:
+#       - name: Alexa Rank action step
+#         id: alexa
+#         uses: phatbhoy67/alexa-action
+#         with:
+#           site-url: "google.com"
+#       # Use the output from the `alexa` step
+#       - name: Get the Alexa Rank
+#         run: echo "The rank is ${{ steps.alexa.outputs.rank }}"
+
 on: [push]
 
 jobs:
-  hello_world_job:
+  alex_action_job:
     runs-on: ubuntu-latest
     name: A job to get Alexa Rank
     steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v1
       - name: Alexa Rank action step
+        uses: ./ # Uses an action in the root directory
         id: alexa
-        uses: phatbhoy67/alexa-action
         with:
           site-url: "google.com"
       # Use the output from the `alexa` step
