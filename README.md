@@ -16,7 +16,8 @@ The Alexa Rank of the site.
 
 ## Example usage
 
-````uses: actions/alexa-action@v1
+```yaml
+uses: actions/alexa-action@v1
 with:
-site-url: 'github.com'```
-````
+  site-url: "github.com"
+```
