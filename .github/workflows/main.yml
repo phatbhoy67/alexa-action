@@ -28,7 +28,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: alexa
         with:
-          site-url: "awesomewm.org/"
+          site-url: "awesomewm.org"
       # Use the output from the `alexa` step
       - name: Get the Alexa Rank
         run: echo "The rank is ${{ steps.alexa.outputs.rank }}"
