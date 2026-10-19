@@ -19,6 +19,6 @@
   "homepage": "https://github.com/phatbhoy67/alexa-action#readme",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@actions/github": "^1.1.0"
+    "@actions/github": "^9.1.1"
   }
 }
